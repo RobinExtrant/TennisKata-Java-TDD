@@ -2,11 +2,13 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 
 public class TennisGame
 {
+	public static final String FIFTEEN_LOVE = "fifteen-love";
+	public static final String LOVE_ALL = "love-all";
 	private String score;
 	
 	public TennisGame()
 	{
-		this.score="love-all";
+		this.score=LOVE_ALL;
 	}
 		
 	public String getScore()
@@ -16,7 +18,7 @@ public class TennisGame
 
 	public void serverScores()
 	{
-		this.score="fifteen-love";
+		this.score=FIFTEEN_LOVE;
 	}
 
 }

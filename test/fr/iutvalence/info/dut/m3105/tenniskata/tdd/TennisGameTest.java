@@ -7,11 +7,12 @@ import org.junit.Test;
 
 public class TennisGameTest
 {
+		
 	@Test
 	public void testLoveAll()
 	{
 		TennisGame tennisGame = new TennisGame();
-		assertEquals(tennisGame.getScore(),"love-all");
+		assertEquals(tennisGame.getScore(),TennisGame.LOVE_ALL);
 	}
 	
 	@Test
@@ -19,7 +20,8 @@ public class TennisGameTest
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.serverScores();
-		assertEquals(tennisGame.getScore(),"fifteen-love");
+		assertEquals(tennisGame.getScore(),TennisGame.FIFTEEN_LOVE);
 	}
+	
 
 }
