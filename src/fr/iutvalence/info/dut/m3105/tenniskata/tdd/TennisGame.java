@@ -6,46 +6,28 @@ public class TennisGame
 	public static final String LOVE_ALL = "love-all";
 	public static final String LOVE_FIFTEEN = "fifteen-love";
 	public static final String FIFTEEN_ALL = "fifteen-all";
-	private String score;
 	
-	TennisGameScoreAutomate automateScore = new TennisGameScoreAutomate();
+	TennisGameScoreAutomate automateScore;
 
 	public TennisGame()
 	{
-		this.score=LOVE_ALL;
+		  automateScore = new TennisGameScoreAutomate();
 	}
 		
 	public String getScore()
 	{
-		return this.score;
+		return this.automateScore.getScore();
 	}
 
 	public void serverScores()
 	{
-		automateScore.updateScore("server");
-		
-		/*if(this.score==LOVE_ALL)
-		{
-			this.score=FIFTEEN_LOVE;
-		}
-		else
-		{
-			this.score=FIFTEEN_ALL;
-		}*/
+		automateScore.updateScoreWithServer();
+
 	}
 
 	public void receiverScores()
 	{
-		automateScore.updateScore("receiver");
-		/*if(this.score==LOVE_ALL)
-		{
-			this.score=LOVE_FIFTEEN;
-		}
-		else
-		{
-			this.score=FIFTEEN_ALL;
-		}*/
-			
+		automateScore.updateScoreWithReceiver();
 	}
 
 }
