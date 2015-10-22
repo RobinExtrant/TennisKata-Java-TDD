@@ -32,7 +32,7 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void testFifteenAll()
+	public void testFifteenAllServerFirst()
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.serverScores();
@@ -41,5 +41,4 @@ public class TennisGameTest
 	}
 	
 	
-
 }
