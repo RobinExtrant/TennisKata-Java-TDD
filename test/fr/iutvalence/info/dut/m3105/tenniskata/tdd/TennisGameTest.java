@@ -40,5 +40,12 @@ public class TennisGameTest
 		assertEquals(tennisGame.getScore(),TennisGame.FIFTEEN_ALL);
 	}
 	
-	
+	@Test
+	public void testFifteenAllReceiverFirst()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.receiverScores();
+		tennisGame.serverScores();
+		assertEquals(tennisGame.getScore(),TennisGame.FIFTEEN_ALL);
+	}
 }
