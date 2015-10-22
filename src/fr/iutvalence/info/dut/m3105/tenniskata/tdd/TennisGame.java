@@ -20,7 +20,14 @@ public class TennisGame
 
 	public void serverScores()
 	{
-		this.score=FIFTEEN_LOVE;
+		if(this.score==LOVE_ALL)
+		{
+			this.score=FIFTEEN_LOVE;
+		}
+		else
+		{
+			this.score=FIFTEEN_ALL;
+		}
 	}
 
 	public void receiverScores()
