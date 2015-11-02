@@ -2,6 +2,9 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 
 public class TennisGame
 {
+	public final static String SERVER = "server";
+	public final static String RECEIVER = "receiver";
+	
 	public static final String FIFTEEN_LOVE = "fifteen-love";
 	public static final String LOVE_ALL = "love-all";
 	public static final String LOVE_FIFTEEN = "fifteen-love";
@@ -21,13 +24,13 @@ public class TennisGame
 
 	public void serverScores()
 	{
-		automateScore.updateScoreWithServer();
+		automateScore.updateScore(TennisGame.SERVER);
 
 	}
 
 	public void receiverScores()
 	{
-		automateScore.updateScoreWithReceiver();
+		automateScore.updateScore(TennisGame.RECEIVER);
 	}
 
 }
